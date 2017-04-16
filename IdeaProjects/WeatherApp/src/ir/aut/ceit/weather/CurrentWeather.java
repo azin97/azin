@@ -8,8 +8,18 @@ import org.json.JSONArray;
 
 /**
  * Created by azin on 4/11/2017.
+ *
  */
 public class CurrentWeather {
+    /**
+     * Current meethod is for getting daily update on a city.
+     * @param json is a string that's been created in another class by getting data from
+     *             a url. it is used to make JSONObjects and JSONArrays, for getting information.
+     *
+     *   this method creates an output String  using  JSON objects an d JSON arrays,
+     *             sends the output string to another class for being written in a file.
+     * @throws JSONException
+     */
     static void Current(String json) throws JSONException {
 
 
