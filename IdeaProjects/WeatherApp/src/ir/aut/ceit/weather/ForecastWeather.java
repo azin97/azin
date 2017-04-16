@@ -8,8 +8,21 @@ import org.json.JSONArray;
 
 /**
  * Created by azin on 4/15/2017.
+ * Forecast weather class is for forecasting the weather of an area for at most 16 days or 5 days with every 3 hours update.
+ *
  */
 public class ForecastWeather {
+
+
+    /**
+     *
+     * @param json is a string that's been created in another class by getting data from
+     *             a url. it is used to make JSONObjects and JSONArrays, for getting information.
+     *
+     *   this method creates an output String  using  JSON objects an d JSON arrays,
+     *             sends the output string to another class for being written in a file.
+     *
+     */
     public void Forecast(String json) {
         int i = 0;
 
@@ -69,7 +82,6 @@ public class ForecastWeather {
                 output += "=";
 
             }
-            // System.out.println(output);
 
 
             i++;
