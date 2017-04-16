@@ -9,7 +9,16 @@ import java.util.*;
  * Created by azin on 4/15/2017.
  */
 public class GetInfo {
-
+    /**
+     *  * getinfo is a class for getting the user's request, processing it, and then leading the program to
+     * other classes based on user's request.
+     *
+     * @return boolean keepgoing
+     * keep going shows whether the user wants to continue or wants to exit the program.
+     *  this class has 6 booleans, used for determining the kind of update each user wants, processing
+     *  each in a switch case loop, then creating a link based on the booleans, and finally sending them to the classes
+     *  the user requested.
+     */
     public boolean GetInformation() {
         Scanner in = new Scanner(System.in);
         MenuView.MenuViewer();
