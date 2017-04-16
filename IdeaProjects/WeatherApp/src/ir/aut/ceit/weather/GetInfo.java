@@ -50,17 +50,19 @@ public class GetInfo {
 
         if (current) {
             if (Id) {
-
+                System.out.println("please enter id:");
                 String id = in.next();
                 link = "http://api.openweathermap.org/data/2.5/weather?id=" + id + "&appid=b9eb6b2c99686fb92a55f2775350c297";
             }
             if (loc) {
+                System.out.println("please enter location(lat and lon):");
 
                 String lot = in.next();
                 String lon = in.next();
                 link = "http://api.openweathermap.org/data/2.5/weather?lat=" + lot + "&lon=" + lon + "&appid=b9eb6b2c99686fb92a55f2775350c297";
             }
             if (name) {
+                System.out.println("please enter city's name:");
 
                 String city = in.next();
                 link = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=b9eb6b2c99686fb92a55f2775350c297";
@@ -77,35 +79,35 @@ public class GetInfo {
                 System.out.println("please enter the number of days you want weather forecast for:");
                 int days = in.nextInt();
                 if (Id) {
-
+                    System.out.println("please enter city's id:");
                     String id = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?q=" + id + "&appid=b9eb6b2c99686fb92a55f2775350c297&cnt=" + days;
                 }
                 if (loc) {
-
+                    System.out.println("please enter city's location:");
                     String lot = in.next();
                     String lon = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lot + "&lon=" + lon + "&appid=b9eb6b2c99686fb92a55f2775350c297&cnt=" + days;
                 }
                 if (name) {
-
+                    System.out.println("please enter city's name:");
                     String city = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=b9eb6b2c99686fb92a55f2775350c297&cnt=" + days;
                 }
             } else {
                 if (loc) {
-
+                    System.out.println("please enter city's location:");
                     String lot = in.next();
                     String lon = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lot + "&lon=" + lon + "appid=b9eb6b2c99686fb92a55f2775350c297";
                 }
                 if (name) {
-
+                    System.out.println("please enter city's name:");
                     String city = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=b9eb6b2c99686fb92a55f2775350c297";
                 }
                 if (Id) {
-
+                    System.out.println("please enter city's id:");
                     String id = in.next();
                     link = "http://api.openweathermap.org/data/2.5/forecast?q=" + id + "&appid=b9eb6b2c99686fb92a55f2775350c297";
                 }

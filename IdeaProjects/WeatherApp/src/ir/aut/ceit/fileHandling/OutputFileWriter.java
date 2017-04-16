@@ -28,8 +28,7 @@ public class OutputFileWriter {
                 dir = new File("forecast");
                 dir.mkdir();
             }
-            System.out.println(dir.getAbsoluteFile());
-            System.out.println(dir.getAbsolutePath());
+
             File myfile = new File(dir.getAbsolutePath()+"\\"+name+".txt");
 
 
