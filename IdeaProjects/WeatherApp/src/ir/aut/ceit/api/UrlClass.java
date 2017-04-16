@@ -17,10 +17,16 @@ import org.json.JSONException;
  * UrlClass is a class for getting data from the internet.
  */
 public class UrlClass {
+    /**
+     *
+     * @param link is a string containning the url we need data from
+     *
+     *            we get the data  using URL and HttpURLconnection.
+     *
+     * @return weatherresult is a string containing the data that was stored in link
+     */
     public static String URLConnection(String link) {
-        /**
-         * URLConnection
-         */
+
         String weatherResult="";
         try {
             URL url = new URL(link);
@@ -29,61 +35,22 @@ public class UrlClass {
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
 
-            String result = InputFileReader.InputFile(httpURLConnection);
+            weatherResult = InputFileReader.InputFile(httpURLConnection);
 
 
 
 
 
-            //System.out.println(weatherResult);
-            return result;
+
+            return weatherResult;
 
         } catch (MalformedURLException ex) {
-            // Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("p");
 
         } catch (IOException ex) {
 
-            //Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("p2");
         } catch (JSONException ex) {
-            System.out.println("p3");
-            // Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-
         }
         return weatherResult;
     }
-    public static String URLConnection(int cityId) {
-        String weatherResult="";
-        try {
-            URL url = new URL("http://api.openweathermap.org/data/2.5/weather?id="+cityId+"&appid=b9eb6b2c99686fb92a55f2775350c297");
 
-
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-
-
-            String result = InputFileReader.InputFile(httpURLConnection);
-
-
-
-
-
-            System.out.println(weatherResult);
-            return result;
-
-        } catch (MalformedURLException ex) {
-            // Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("p");
-
-        } catch (IOException ex) {
-
-            // Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("p2");
-        } catch (JSONException ex) {
-            System.out.println("p3");
-            // Logger.getLogger(BaseWeather.class.getName()).log(Level.SEVERE, null, ex);
-
-        }
-        return weatherResult;
-    }
 }
