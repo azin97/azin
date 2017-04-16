@@ -10,6 +10,12 @@ import java.net.HttpURLConnection;
  * Created by azin on 4/15/2017.
  */
 public class InputFileReader {
+    /**
+     *
+     * @param k is the link of the internet site we need data from.
+     *
+     * @return A string containing the data stored in the link(k).
+     */
     public static String InputFile(HttpURLConnection k){
         String result="";
         try{
